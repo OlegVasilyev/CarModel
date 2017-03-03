@@ -1,0 +1,9 @@
+c:\users\олег\documents\visual studio 2015\Projects\CarModel\CarModel\bin\Debug\CarModel.exe.config
+c:\users\олег\documents\visual studio 2015\Projects\CarModel\CarModel\obj\Debug\CarModel.csprojResolveAssemblyReference.cache
+c:\users\олег\documents\visual studio 2015\Projects\CarModel\CarModel\obj\Debug\CarModel.Properties.Resources.resources
+c:\users\олег\documents\visual studio 2015\Projects\CarModel\CarModel\obj\Debug\CarModel.csproj.GenerateResource.Cache
+c:\users\олег\documents\visual studio 2015\Projects\CarModel\CarModel\bin\Debug\CarModel.exe
+c:\users\олег\documents\visual studio 2015\Projects\CarModel\CarModel\bin\Debug\CarModel.pdb
+c:\users\олег\documents\visual studio 2015\Projects\CarModel\CarModel\obj\Debug\CarModel.exe
+c:\users\олег\documents\visual studio 2015\Projects\CarModel\CarModel\obj\Debug\CarModel.pdb
+c:\users\олег\documents\visual studio 2015\Projects\CarModel\CarModel\obj\Debug\CarModel.Track.resources
