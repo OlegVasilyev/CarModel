@@ -22,7 +22,7 @@ namespace CarModel.MachineComponents
 
             set
             {
-                if(value>0)
+                if(value>=0)
                 volume = value;
             }
         }

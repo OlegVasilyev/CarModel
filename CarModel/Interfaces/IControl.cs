@@ -9,5 +9,6 @@ namespace CarModel.Interfaces
     interface IControl
     {
         string StateForTurnSignal();
+        int StateStWheel { get; set; }
     }
 }

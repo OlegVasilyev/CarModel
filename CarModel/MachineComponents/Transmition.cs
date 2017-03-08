@@ -9,10 +9,11 @@ namespace CarModel.MachineComponents
 {
     class Transmition : ITransmition, IInformationAbout
     {
-        public Transmition() { Power = 0; }
+        public Transmition() {/*изначально мы ставим мощность на ноль*/ Power = 0; }
         public int Power { get; set; }
         public void HandBrake()
         {
+            
             Power = 0;
         }
         public void InformationAboutComponents()

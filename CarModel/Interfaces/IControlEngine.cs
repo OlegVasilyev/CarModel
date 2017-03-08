@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CarModel.Interfaces
 {
-    interface IFuel : IInformationAbout
+    interface IControlEngine
     {
-        bool IsEmpty();
-        int Volume { get; set; }
+        void OnEngine();
+        void OffEngine();
     }
 }

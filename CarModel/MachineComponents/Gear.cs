@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 using CarModel.Interfaces;
 namespace CarModel.MachineComponents
 {
-    class Gear : IInformationAbout
+    class Gear : IInformationAbout, IGear
     {
-        public Multiplication power { get; set; }
+        public Multiplication Power { get; set; }
         public void InformationAboutComponents()
         {
             Console.WriteLine("Это коробка передач");
         }
     }
-    enum Multiplication
-    { R = -1, N = 0, one = 1, two = 2, three = 3, four = 4 }
 }

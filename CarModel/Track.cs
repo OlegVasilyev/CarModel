@@ -9,20 +9,21 @@ using System.Threading;
 using System.Windows.Forms;
 using CarModel.MachineComponents;
 using CarModel.Interfaces;
+using CarModel.Abstract;
 namespace CarModel
 {
     public partial class Track : Form
     {
         public delegate void HH(Button button);
         Car car;
-        Engine engine;
-        StWheel stwheel;
-        Wheel wheel;
-        Transmition transmition;
+        IEngine engine;
+        IControl stwheel;
+        IWheel wheel;
+        ITransmition transmition;
+        IFuel petrol;
+        IGear gear;
         Thread runcar;
-        Gear gear;
         HH Hep;
-        PetrolTank petrol;
         public Track()
         {
             InitializeComponent();
@@ -36,16 +37,17 @@ namespace CarModel
             ChangeSpeed.DataSource = Enum.GetValues(typeof(Multiplication));
             ChangeSpeed.SelectedText = Multiplication.one.ToString();
             //Спросить за гибкость в данной модели
-            car = new Car(engine, stwheel, gear, wheel, transmition, petrol);
+            car = new NormalCar(engine, gear, transmition ,stwheel, wheel, petrol);
             runcar = new Thread(Moved);
             OffEngine.Enabled = false;
-
+            //все изменения и функционал мы берем не напрямую через компоненты а через объекта класса Car
+            //форма Track ничего не знает о компонентах машины, хоть и объекты создаються тут
         }
         private void StartButton_Click(object sender, EventArgs e)
         {
-            if (!car.Petrol.IsEmpty())
+            if (!car.Fuel.IsEmpty())
             {
-                car.StartEngine();
+                car.OnEngine();
                 timerForPipe.Start();
                 labelforpipe.Text = "дырдырдырдырдырдырдырдырдыр";
                 StartButton.BackColor = Color.Green;
@@ -57,7 +59,7 @@ namespace CarModel
         {
             GoButton.Enabled = true;
             BrakeButton.Enabled = true;
-            if (car.IsEngineON())
+            if (car.Clutch())
             {
                 runcar.IsBackground = true;
                 runcar.Start();
@@ -77,7 +79,7 @@ namespace CarModel
         private void ChangeSpeed_SelectedIndexChanged(object sender, EventArgs e)
 
         {
-           car.Gear.power = (Multiplication)ChangeSpeed.SelectedValue;
+            car.Gear.Power = (Multiplication)ChangeSpeed.SelectedValue;
         }
         private void Moved()
         {
@@ -97,18 +99,18 @@ namespace CarModel
         {
             if (B.Location.X > 950 || B.Location.X < 50 || B.Location.Y > 600 || B.Location.Y < 50)
             {
-                car.Petrol.Volume--;
+                --car.Fuel.Volume;
                 B.Location = new Point(500, 300);
             }
-            B.Location = new Point(B.Location.X + car.Wheel.x, B.Location.Y + car.Wheel.y);
+            B.Location = new Point(B.Location.X + car.Wheel.X, B.Location.Y + car.Wheel.Y);
 
         }
 
         private void timerForRUNrUN_Tick(object sender, EventArgs e)
         {
             turnlabelsignal.Text = car.Stwheel.StateForTurnSignal();
-            label4.Text = (Convert.ToInt32(car.Gear.power) * car.Transmition.Power).ToString();
-            petrollable.Text = car.Petrol.Volume.ToString() + " л.";
+            label4.Text = (Convert.ToInt32(car.Gear.Power) * car.Transmition.Power).ToString();
+            petrollable.Text = car.Fuel.Volume.ToString() + " л.";
             if (labelforpipe.Left > -labelforpipe.Width)
             {
                 labelforpipe.Left -= 5;
@@ -139,13 +141,13 @@ namespace CarModel
             car.OffEngine();
             timerForPipe.Stop();
             labelforpipe.Text = "";
-            car.Gear.power = Multiplication.N;
+            car.Gear.Power = Multiplication.N;
             runcar.Abort();
         }
 
         private void PetrolAdd_Click(object sender, EventArgs e)
         {
-            car.Petrol.Volume = (int)numericPetrol.Value;
+            car.Fuel.Volume = (int)numericPetrol.Value;
         }
 
         private void handbrake_Click(object sender, EventArgs e)

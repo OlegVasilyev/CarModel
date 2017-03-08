@@ -9,5 +9,6 @@ namespace CarModel.Interfaces
     interface ITransmition
     {
         void HandBrake();
+        int Power { get; set; }
     }
 }

@@ -7,3 +7,25 @@ c:\users\олег\documents\visual studio 2015\Projects\CarModel\CarModel\bin\De
 c:\users\олег\documents\visual studio 2015\Projects\CarModel\CarModel\obj\Debug\CarModel.exe
 c:\users\олег\documents\visual studio 2015\Projects\CarModel\CarModel\obj\Debug\CarModel.pdb
 c:\users\олег\documents\visual studio 2015\Projects\CarModel\CarModel\obj\Debug\CarModel.Track.resources
+C:\Users\Олег\Desktop\github\modelCar\CarModel\bin\Debug\CarModel.exe.config
+C:\Users\Олег\Desktop\github\modelCar\CarModel\obj\Debug\CarModel.exe
+C:\Users\Олег\Desktop\github\modelCar\CarModel\obj\Debug\CarModel.pdb
+C:\Users\Олег\Desktop\github\modelCar\CarModel\bin\Debug\CarModel.exe
+C:\Users\Олег\Desktop\github\modelCar\CarModel\bin\Debug\CarModel.pdb
+C:\Users\Олег\Desktop\github\modelCar\CarModel\obj\Debug\CarModel.csprojResolveAssemblyReference.cache
+C:\Users\Олег\Desktop\github\modelCar\CarModel\obj\Debug\CarModel.Properties.Resources.resources
+C:\Users\Олег\Desktop\github\modelCar\CarModel\obj\Debug\CarModel.Track.resources
+C:\Users\Олег\Desktop\github\modelCar\CarModel\obj\Debug\CarModel.csproj.GenerateResource.Cache
+D:\modelCar\CarModel\bin\Debug\CarModel.exe.config
+D:\modelCar\CarModel\obj\Debug\CarModel.exe
+D:\modelCar\CarModel\obj\Debug\CarModel.pdb
+C:\Users\Олег\Desktop\modelCar-master\CarModel\bin\Debug\CarModel.exe.config
+C:\Users\Олег\Desktop\modelCar-master\CarModel\obj\Debug\CarModel.exe
+C:\Users\Олег\Desktop\modelCar-master\CarModel\obj\Debug\CarModel.pdb
+C:\Users\Олег\Desktop\modelCar-master\CarModel\obj\Debug\CarModel.csprojResolveAssemblyReference.cache
+C:\Users\Олег\Desktop\modelCar-master\CarModel\obj\Debug\CarModel.Properties.Resources.resources
+C:\Users\Олег\Desktop\modelCar-master\CarModel\obj\Debug\CarModel.Track.resources
+C:\Users\Олег\Desktop\modelCar-master\CarModel\obj\Debug\CarModel.csproj.GenerateResource.Cache
+D:\CarModel\CarModel\bin\Debug\CarModel.exe.config
+D:\CarModel\CarModel\obj\Debug\CarModel.exe
+D:\CarModel\CarModel\obj\Debug\CarModel.pdb

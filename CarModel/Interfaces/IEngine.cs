@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace CarModel.Interfaces
 {
-    interface IEngine
+    interface IEngine : IControlEngine
     {
-        void Start();
-        void OffEngine();
+        bool ActivityEngine { get; }
+        int Maxpower { get; }
+
     }
 }

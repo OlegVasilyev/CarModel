@@ -46,13 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Car.cs" />
+    <Compile Include="Abstract\Car.cs" />
     <Compile Include="Interfaces\ICar.cs" />
     <Compile Include="Interfaces\IControl.cs" />
+    <Compile Include="Interfaces\IControlEngine.cs" />
     <Compile Include="Interfaces\IEngine.cs" />
     <Compile Include="Interfaces\IFuel.cs" />
+    <Compile Include="Interfaces\IGear.cs" />
     <Compile Include="Interfaces\IInformationAbout.cs" />
+    <Compile Include="Interfaces\IPedalControl.cs" />
     <Compile Include="Interfaces\ITransmition.cs" />
+    <Compile Include="Interfaces\IWheel.cs" />
+    <Compile Include="NormalCar.cs" />
     <Compile Include="MachineComponents\Engine.cs" />
     <Compile Include="MachineComponents\Gear.cs" />
     <Compile Include="MachineComponents\PetrolTank.cs" />

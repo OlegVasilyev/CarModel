@@ -9,7 +9,7 @@ namespace CarModel.MachineComponents
     class Engine : IEngine, IInformationAbout
     {
         private bool activityEngine;
-        private int maxpower;
+        private readonly int maxpower;// так как мощность нельзя сменить
 
         public Engine(int maxpow)
         {
@@ -30,8 +30,7 @@ namespace CarModel.MachineComponents
                 return maxpower;
             }
         }
-
-        public void Start()
+        public void OnEngine()
         {
             activityEngine = true;
         }
